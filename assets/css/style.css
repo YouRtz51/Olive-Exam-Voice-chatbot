@@ -1,0 +1,379 @@
+@keyframes anime {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.04);
+    }
+
+    30% {
+        transform: scale(1.06);
+    }
+
+    55% {
+        transform: scale(1.07);
+    }
+
+    75% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#querybox,#qbox{
+    justify-content: flex-start;
+    margin-top: 144px;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    height: 100vh;
+    width: 100%;
+    background: #fff url(../img/preloader/Spinner-1s-200px.gif) no-repeat center;
+    background-size: 15%;
+}
+
+#user-out{
+    font-size: 24px;
+    color: crimson;
+    margin-left: 16px;
+}
+.profilebar{
+    width: 100%;
+    align-items: center;
+}
+.profilebar ul{
+    list-style: none;
+}
+#user-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: 0.3s all ease;
+}
+
+.logo:hover {
+    transform: rotate(-5deg);
+    transition: 0.3s all ease;
+}
+
+.logo span {
+    color: rgb(101, 255, 117);
+}
+
+.fixed-top {
+    box-shadow: 0 0 24px #555;
+    z-index: 999;
+}
+
+.navlinks ul li a {
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    word-spacing: 5px;
+}
+
+.navlinks ul li a:hover {
+    transform: rotate(-5deg);
+    transition: 0.3s all ease;
+    filter: invert(.5);
+}
+
+.wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding-left: 36px;
+    padding-right: 48px;
+    width: 100%;
+    min-height: 500px;
+}
+.wrapper .row{
+    margin-top: 96px;
+}
+
+.wrapper .row .imgbx {
+    max-width: 100%;
+}
+
+.wrapper .imgbx img {
+    max-height: 450px;
+    cursor: pointer;
+    position: relative;
+    animation: anime 9s ease infinite;
+}
+
+.formbx {
+    display: inline-block;
+    margin-top: 108px;
+    max-width: 100%;
+    box-shadow: 0 1px 3px #555;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.formbx input {
+    min-width: 80%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.formbx i {
+    font-size: 21px;
+}
+
+.formbx:hover i {
+    color: rgb(95, 0, 219);
+    font-size: 23px;
+}
+
+
+.infobx {
+    max-width: 80%;
+    text-align: center;
+}
+
+.infobx p {
+    font-size: 15px;
+}
+
+/* ================Chat Section Styling========================== */
+
+.chatsection {
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+.chatsection .sidebar {
+    position: fixed;
+}
+
+.chatsection .sidebar ul {
+    margin-top: 108px;
+}
+
+.chatsection .chatbx {
+    position: absolute;
+    right: 0;
+    height: auto;
+    border-left: 1px solid #888;
+    overflow-y: hidden;
+}
+
+.msgbx {
+    background: #fff;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    align-self: flex-end;
+    min-width: 476px;
+    box-shadow: 0 1px 3px #555;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.msgbx #main_inp {
+    min-width: 400px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.msgbx button {
+    background: none
+}
+
+.msgbx i {
+    background: #fff;
+    font-size: 21px;
+}
+
+.msgbx:hover i {
+    color: rgb(95, 0, 219);
+    font-size: 23px;
+}
+
+.messages {
+    width: 100%;
+    padding: 8px;
+    padding-right: 16px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 81px;
+    margin-top: 36px;
+}
+
+.msg-card {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 24px;
+}
+
+.msg-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin: 3px;
+}
+
+.msg-card p {
+    min-width: 64px;
+    max-width: 470px;
+    background: rgb(222, 222, 222);
+    padding: 11px;
+    border-radius: 18px;
+}
+
+.user-msg span {
+    font-size: 14px;
+    position: absolute;
+    right: 16px;
+    bottom: -21px;
+    font-weight: 600;
+}
+
+.bot-msg span {
+    font-size: 14px;
+    position: absolute;
+    right: 16px;
+    bottom: -1px;
+    font-weight: 600;
+}
+
+.user-msg {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.bot-msg {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.user-msg p {
+    background: rgb(234, 234, 234);
+}
+
+.bot-msg p {
+    background: rgb(237, 199, 226);
+}
+
+/* login box */
+
+.loginbx {
+    position: relative;
+    margin-top: 144px;
+    max-width: 576px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #999;
+    padding: 32px;
+    border-radius: 18px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  #ticketbox {
+    display: flex;
+    margin-left: 114px;
+    margin-top: 16px;
+  }
+  #ticketbox textarea {
+    min-width: 396px;
+    width: 100%;
+    padding: 6px;
+  }
+
+  #marks{
+    max-width: 296px;
+    margin-left: 96px;
+  }
