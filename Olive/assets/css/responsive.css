@@ -1,0 +1,99 @@
+@media screen and (max-width: 600px) {
+    .wrapper {
+        height: 100vh;
+    }
+
+    .wrapper .imgbx img {
+        max-height: 400px;
+    }
+
+    .infobx {
+        max-width: 100%;
+        margin-top: 64px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper .imgbx img {
+        max-height: 350px;
+    }
+
+    .infobx {
+        max-width: 100%;
+        margin-top: 36px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .wrapper .imgbx img {
+        max-height: 250px;
+    }
+
+    .infobx {
+        max-width: 100%;
+        margin-top: 36px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #aside {
+        display: none;
+    }
+
+    .chatbx {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .msgbx{
+        max-width:400px;
+        min-width: 200px;
+    }
+    .msgbx #main_inp {
+        min-width: 300px;
+    }
+
+    #user-out {
+        font-size: 19px;
+        color: crimson;
+        margin-left: 11px;
+    }
+
+    #user-icon {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 11px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .msgbx{
+        max-width:300px;
+        min-width: 200px;
+    }
+    .msgbx #main_inp {
+        min-width: 250px;
+    }
+
+
+    #user-out {
+        font-size: 16px;
+        color: crimson;
+        margin-left: 9px;
+    }
+
+    #user-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+}
